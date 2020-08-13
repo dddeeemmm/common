@@ -1,0 +1,23 @@
+---
+
+- name: install common packages
+  package:
+    name: '{{ common_packages }}'
+  delay: 10
+  retries: 3
+  register: result
+  until: result is succeeded
+  when:
+    - common_packages is defined
+    - common_packages != ''
+    - common_packages != []
+
+- name: enable and start common services
+  systemd:
+    name: '{{ common_services }}'
+    enabled: yes
+    state: started
+  when:
+    - common_services is defined
+    - common_services != ''
+    - common_services != []
