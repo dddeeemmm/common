@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../awx/.idea/awx.iml" filepath="$PROJECT_DIR$/../awx/.idea/awx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/common.iml" filepath="$PROJECT_DIR$/.idea/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../docker-compose/.idea/docker-compose.iml" filepath="$PROJECT_DIR$/../docker-compose/.idea/docker-compose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../filesystem/.idea/filesystem.iml" filepath="$PROJECT_DIR$/../filesystem/.idea/filesystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../freeipa-client/.idea/freeipa-client.iml" filepath="$PROJECT_DIR$/../freeipa-client/.idea/freeipa-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../freeipa-mgmt/.idea/freeipa-mgmt.iml" filepath="$PROJECT_DIR$/../freeipa-mgmt/.idea/freeipa-mgmt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../openvpn/.idea/openvpn.iml" filepath="$PROJECT_DIR$/../openvpn/.idea/openvpn.iml" />
+    </modules>
+  </component>
+</project>
