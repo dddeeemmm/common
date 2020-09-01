@@ -1,5 +1,15 @@
 ---
 
+- name: install epel-release
+  package:
+    name: epel-release
+  when: common_epel
+
+- include: ca.yml
+  when:
+    - common_ca is defined
+    - common_ca != ''
+
 - name: install common packages
   package:
     name: '{{ common_packages }}'

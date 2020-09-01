@@ -1,23 +1,26 @@
 common
 =========
 
-    Install packages, enable and start services
+    Install packages and CA, enable and start services
 
 Role Variables
 --------------
 
     common_packages:    list of packages to be installed
     common_services:    list of services to be enabled and started
+    common_ca:          path to root ca pem
 
 Example Playbook
 ----------------
 
     - hosts: servers
       vars:
+        common_epel: true
         common_packages: ['vim', 'tmux']
-        common services: ['haproxy']
+        common_services: ['haproxy']
+        common_ca: '{{ role_path }}/certificates/ca.pem' 
       roles:
-         - { role: common }
+         - common
 
 License
 -------
