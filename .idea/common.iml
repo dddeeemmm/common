@@ -10,5 +10,6 @@
     <orderEntry type="module" module-name="openvpn" />
     <orderEntry type="module" module-name="freeipa-mgmt" />
     <orderEntry type="module" module-name="awx" />
+    <orderEntry type="module" module-name="openvpn" />
   </component>
 </module>
