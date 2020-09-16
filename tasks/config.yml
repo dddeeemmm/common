@@ -1,0 +1,6 @@
+---
+
+- name: make ls auto color
+  lineinfile:
+    path: /etc/bash.bashrc
+    line: alias ls='ls --color=auto'

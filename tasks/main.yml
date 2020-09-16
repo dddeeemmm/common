@@ -7,10 +7,20 @@
 
 - include: ca.yml
   when:
-    - common_ca is defined
-    - common_ca != ''
+    - common_ca
+    - common_ca_path is defined
+    - common_ca_path != ''
 
-- name: install common packages
+- name: install common_default_packages
+  package:
+    name: '{{ common_default_packages }}'
+  delay: 10
+  retries: 3
+  register: result
+  until: result is succeeded
+  when: common_default_packages_install
+
+- name: install common_packages
   package:
     name: '{{ common_packages }}'
   delay: 10
@@ -22,7 +32,7 @@
     - common_packages != ''
     - common_packages != []
 
-- name: enable and start common services
+- name: enable and start common_services
   systemd:
     name: '{{ common_services }}'
     enabled: yes

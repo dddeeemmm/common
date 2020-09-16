@@ -9,8 +9,8 @@
 
     - name: Copy PEM into folder
       copy:
-        src: '{{ common_ca }}'
-        dest: /etc/pki/ca-trust/source/anchors/{{ common_ca | basename }}
+        src: '{{ common_ca_path }}'
+        dest: /etc/pki/ca-trust/source/anchors/{{ common_ca_path | basename }}
       register: result
 
     - name: Update CA Trust
@@ -36,8 +36,8 @@
     # Note that the .crt is actually a .pem renamed
     - name: Copy the certificate
       copy:
-        src: '{{ common_ca }}'
-        dest: /usr/local/share/ca-certificates/{{ common_ca | basename }}.crt
+        src: '{{ common_ca_path }}'
+        dest: /usr/local/share/ca-certificates/{{ common_ca_path | basename }}.crt
       register: result
 
     - name: Update CA Trust

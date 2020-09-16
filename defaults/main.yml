@@ -3,4 +3,5 @@
 common_packages: []
 common_services: []
 common_epel: false
-common_ca: ''
+common_ca: true
+common_default_packages_install: true

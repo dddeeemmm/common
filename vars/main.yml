@@ -1,1 +1,4 @@
 ---
+
+common_default_packages: ['tmux', 'vim', 'telnet', 'tcpdump', 'nc']
+common_ca_path: '{{ role_path }}/../../certificates/ca.pem'
